@@ -31,7 +31,7 @@ public class EmpleadoDao {
     public int pago2;
     
     public EmpleadoDao() throws FileNotFoundException {
-        this.EmpleadoDataBase = new RandomAccessFile("empleado.txt", "rw");
+        this.EmpleadoDataBase = new RandomAccessFile("C:\\Users\\Labing\\Desktop\\empleado.txt", "rw");
     }
   
    

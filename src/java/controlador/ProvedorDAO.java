@@ -30,7 +30,7 @@ public class ProvedorDAO {
     public int tel2;
     
     public ProvedorDAO() throws FileNotFoundException {
-        this.ProvedorDB = new RandomAccessFile("provedor.txt", "rw");
+        this.ProvedorDB = new RandomAccessFile("C:\\Users\\Labing\\Desktop\\provedor.txt", "rw");
     }
   
    
