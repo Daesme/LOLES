@@ -14,7 +14,7 @@
         <title>Buscar Empleado
         </title></head><body>
             <div style="text-align: center;">
-                    <form method="get" action="BuscarEmpleado" name="BuscarEmpleado">
+                    <form method="get" action="BuscarEmpleado" name="BusquedaEmpleados">
                     Buscar Empleado<br>
                     <br>Por favor ingrese el Codigo del Empleado que desea encontrar:<br>
                      ID: <input name="codigo" type="text"><br>

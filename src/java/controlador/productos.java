@@ -5,26 +5,20 @@
  */
 package controlador;
 
+import Modelo.Producto;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Modelo.Provedor;
-import Modelo.ArbolProvedor;
-import java.util.Timer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
- * @author crist
+ * @author Labing
  */
-public class provedor extends HttpServlet {
-
-    ProvedorDAO prove;
-    ArbolProvedor arbol = new ArbolProvedor();
+public class productos extends HttpServlet {
+    ProductoDao prodao;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,21 +30,23 @@ public class provedor extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, InterruptedException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-
-            int id = Integer.valueOf(request.getParameter("IDEstu"));
-            char[] nombre2 = request.getParameter("NombreEstu").toCharArray();
-            char[] apellido2 = request.getParameter("ApellidoEstu").toCharArray();
-            int tel = Integer.valueOf(request.getParameter("TelefonoEstu"));
-
             /* TODO output your page here. You may use following sample code. */
-                Provedor estudiante = new Provedor(id, nombre2, apellido2, tel);
-                prove = new ProvedorDAO();
-                prove.insertar(estudiante);
-                prove.listarTodo();
-                prove.destructor();
+          
+            int id = Integer.valueOf(request.getParameter("id"));
+            char[] nombre2 = request.getParameter("nombre").toCharArray();
+            int cantidad = Integer.valueOf(request.getParameter("apellido"));
+            int valor = Integer.valueOf(request.getParameter("valor"));
+            
+            
+            /* TODO output your page here. You may use following sample code. */
+            Producto pro = new Producto(id, nombre2, cantidad, valor);
+            prodao = new ProductoDao();
+            prodao.insertar(pro);
+            prodao.listarTodo();
+            prodao.destructor();
         }
     }
 
@@ -66,11 +62,7 @@ public class provedor extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(provedor.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**
@@ -84,11 +76,7 @@ public class provedor extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(provedor.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**

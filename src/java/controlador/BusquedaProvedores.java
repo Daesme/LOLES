@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import Modelo.Provedor;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -15,9 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author crist
+ * @author Labing
  */
-public class BusquedaEmpleado extends HttpServlet {
+public class BusquedaProvedores extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,13 +33,13 @@ public class BusquedaEmpleado extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */         
-            String codigo = request.getParameter("codigo");
-            Modelo.Empleado emp = new Modelo.Empleado(Integer.parseInt(codigo),null,0, 0);
+            /* TODO output your page here. You may use following sample code. */
+          String id = request.getParameter("id");
+            Provedor pro = new Provedor(Integer.parseInt(id),null,null, 0);
             
-            RequestDispatcher dispacher =request.getRequestDispatcher("BusquedaEmpleado.jsp");
+            RequestDispatcher dispacher =request.getRequestDispatcher("BusquedaProvedor.jsp");
             
-            request.setAttribute("empleado", emp);
+            request.setAttribute("provedor", pro);
             dispacher.forward(request, response);
         }
     }

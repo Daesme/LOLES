@@ -5,56 +5,52 @@
         <servlet-class>controlador.producto</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>provedor</servlet-name>
-        <servlet-class>controlador.provedor</servlet-class>
+        <servlet-name>BusquedaProductos</servlet-name>
+        <servlet-class>controlador.BusquedaProductos</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>BusquedaEstudiante</servlet-name>
-        <servlet-class>controlador.BusquedaProvedor</servlet-class>
+        <servlet-name>BusquedaProvedores</servlet-name>
+        <servlet-class>controlador.BusquedaProvedores</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>BusquedaProfesores</servlet-name>
-        <servlet-class>controlador.BusquedaProducto</servlet-class>
+        <servlet-name>empleados</servlet-name>
+        <servlet-class>controlador.empleados</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>BusquedaCursos</servlet-name>
-        <servlet-class>controlador.BusquedaEmpleado</servlet-class>
+        <servlet-name>productos</servlet-name>
+        <servlet-class>controlador.productos</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>CursosDao</servlet-name>
-        <servlet-class>controlador.empledo</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>inscripcion</servlet-name>
-        <servlet-class>controlador.inscripcion</servlet-class>
+        <servlet-name>provedores</servlet-name>
+        <servlet-class>controlador.provedores</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Ejemplo</servlet-name>
         <url-pattern>/Ingresodocentes</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>estudiante</servlet-name>
-        <url-pattern>/Ingreso</url-pattern>
+        <servlet-name>BusquedaEmpleados</servlet-name>
+        <url-pattern>/BusquedaEmpleados</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>BusquedaEstudiante</servlet-name>
-        <url-pattern>/BuscarAlumno</url-pattern>
+        <servlet-name>BusquedaProductos</servlet-name>
+        <url-pattern>/BusquedaProductos</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>BusquedaProfesores</servlet-name>
-        <url-pattern>/BuscarProfesor</url-pattern>
+        <servlet-name>BusquedaProvedores</servlet-name>
+        <url-pattern>/BusquedaProvedores</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>BusquedaCursos</servlet-name>
-        <url-pattern>/BuscarCurso</url-pattern>
+        <servlet-name>empleados</servlet-name>
+        <url-pattern>/empleados</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>CursosDao</servlet-name>
-        <url-pattern>/IngresoC</url-pattern>
+        <servlet-name>productos</servlet-name>
+        <url-pattern>/productos</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>inscripcion</servlet-name>
-        <url-pattern>/Inscripciones</url-pattern>
+        <servlet-name>provedores</servlet-name>
+        <url-pattern>/provedores</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

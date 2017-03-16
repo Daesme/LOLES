@@ -5,9 +5,7 @@
  */
 package controlador;
 
-import Modelo.ArbolProductos;
 import Modelo.Empleado;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,10 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author crist
+ * @author Labing
  */
-public class empledo extends HttpServlet {
-
+public class empleados extends HttpServlet {
     EmpleadoDao cur;
 
     /**
@@ -37,7 +34,7 @@ public class empledo extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            int codigo = Integer.valueOf(request.getParameter("Codigo"));
+           int codigo = Integer.valueOf(request.getParameter("Codigo"));
             char[] nombre2 = request.getParameter("NombreCurso").toCharArray();
             int dur = Integer.valueOf(request.getParameter("Duracion"));
             int idprof = Integer.valueOf(request.getParameter("idProf"));
@@ -48,7 +45,7 @@ public class empledo extends HttpServlet {
                 cur.insertar(curso);
                 cur.listarTodo();
                 cur.destructor();
-            }
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

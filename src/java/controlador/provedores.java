@@ -5,21 +5,22 @@
  */
 package controlador;
 
+import Modelo.ArbolProvedor;
+import Modelo.Provedor;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Modelo.Producto;
 
 /**
  *
- * @author crist
+ * @author Labing
  */
-public class BusquedaProducto extends HttpServlet {
-
+public class provedores extends HttpServlet {
+   ProvedorDAO prove;
+    ArbolProvedor arbol = new ArbolProvedor();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -33,14 +34,18 @@ public class BusquedaProducto extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */         
-            String id = request.getParameter("id");
-            Producto pro = new Producto(Integer.parseInt(id),null,0, 0);
-            
-            RequestDispatcher dispacher =request.getRequestDispatcher("BusquedaProducto.jsp");
-            
-            request.setAttribute("producto", pro);
-            dispacher.forward(request, response);
+            /* TODO output your page here. You may use following sample code. */
+            int id = Integer.valueOf(request.getParameter("IDEstu"));
+            char[] nombre2 = request.getParameter("NombreEstu").toCharArray();
+            char[] apellido2 = request.getParameter("ApellidoEstu").toCharArray();
+            int tel = Integer.valueOf(request.getParameter("TelefonoEstu"));
+
+            /* TODO output your page here. You may use following sample code. */
+                Provedor estudiante = new Provedor(id, nombre2, apellido2, tel);
+                prove = new ProvedorDAO();
+                prove.insertar(estudiante);
+                prove.listarTodo();
+                prove.destructor();
         }
     }
 

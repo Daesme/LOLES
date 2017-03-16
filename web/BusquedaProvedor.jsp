@@ -14,7 +14,7 @@
         <title>Buscar Proveedor
         </title></head><body>
             <div style="text-align: center;">
-                <form method="get" action="BuscarProvedor" name="BuscarProvedor">
+                <form method="get" action="BuscarProvedor" name="BusquedaProvedores">
                     Buscar Proveedor<br>
                     <br>Por favor ingrese el ID del Provedor que desea encontrar:<br>
                      ID: <input name="id" type="text"><br>

@@ -12,13 +12,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Modelo.Provedor;
 
 /**
  *
- * @author crist
+ * @author Labing
  */
-public class BusquedaProvedor extends HttpServlet {
+public class BusquedaProductos extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,16 +32,22 @@ public class BusquedaProvedor extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+          
+      
             /* TODO output your page here. You may use following sample code. */         
-            String id = request.getParameter("id");
-            Provedor pro = new Provedor(Integer.parseInt(id),null,null, 0);
+            String codigo = request.getParameter("codigo");
+            Modelo.Empleado emp = new Modelo.Empleado(Integer.parseInt(codigo),null,0, 0);
             
-            RequestDispatcher dispacher =request.getRequestDispatcher("BusquedaProvedor.jsp");
+            RequestDispatcher dispacher =request.getRequestDispatcher("BusquedaEmpleado.jsp");
             
-            request.setAttribute("provedor", pro);
+            request.setAttribute("empleado", emp);
             dispacher.forward(request, response);
         }
     }
+
+        
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
