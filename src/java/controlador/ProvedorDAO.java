@@ -28,9 +28,9 @@ public class ProvedorDAO {
     public String nuevo3="";
     public String nuevo4="";
     public int tel2;
-    
+    //lol//
     public ProvedorDAO() throws FileNotFoundException {
-        this.ProvedorDB = new RandomAccessFile("C:\\Users\\Labing\\Desktop\\provedor.txt", "rw");
+        this.ProvedorDB = new RandomAccessFile("provedor.txt", "rw");
     }
   
    
