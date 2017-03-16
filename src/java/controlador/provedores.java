@@ -35,10 +35,10 @@ public class provedores extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            int id = Integer.valueOf(request.getParameter("IDEstu"));
-            char[] nombre2 = request.getParameter("NombreEstu").toCharArray();
-            char[] apellido2 = request.getParameter("ApellidoEstu").toCharArray();
-            int tel = Integer.valueOf(request.getParameter("TelefonoEstu"));
+            int id = Integer.valueOf(request.getParameter("IDProvedor"));
+            char[] nombre2 = request.getParameter("NombreProvedor").toCharArray();
+            char[] apellido2 = request.getParameter("ApellidoProvedor").toCharArray();
+            int tel = Integer.valueOf(request.getParameter("Telefono"));
 
             /* TODO output your page here. You may use following sample code. */
                 Provedor estudiante = new Provedor(id, nombre2, apellido2, tel);

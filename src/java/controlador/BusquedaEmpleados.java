@@ -34,7 +34,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */         
             String codigo = request.getParameter("codigo");
-            Modelo.Empleado emp = new Modelo.Empleado(Integer.parseInt(codigo),null,0, 0);
+            Modelo.Empleado emp = new Modelo.Empleado(Integer.parseInt(codigo),null,0);
             
             RequestDispatcher dispacher =request.getRequestDispatcher("BusquedaEmpleado.jsp");
             

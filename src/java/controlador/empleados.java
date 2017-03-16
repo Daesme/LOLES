@@ -35,12 +35,11 @@ public class empleados extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
            int codigo = Integer.valueOf(request.getParameter("Codigo"));
-            char[] nombre2 = request.getParameter("NombreCurso").toCharArray();
+            char[] nombre2 = request.getParameter("NombreEmpleado").toCharArray();
             int dur = Integer.valueOf(request.getParameter("Duracion"));
-            int idprof = Integer.valueOf(request.getParameter("idProf"));
 
             /* TODO output your page here. You may use following sample code. */
-                Empleado curso = new Empleado(codigo, nombre2, dur, idprof);
+                Empleado curso = new Empleado(codigo, nombre2,dur);
                 cur = new EmpleadoDao();
                 cur.insertar(curso);
                 cur.listarTodo();

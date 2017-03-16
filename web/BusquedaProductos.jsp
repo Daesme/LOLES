@@ -10,7 +10,7 @@
         <title>Busqueda Producto
         </title></head><body>
             <div style="text-align: center;">
-                <form method="get" action="BuscarProducto" name="BusquedaProductos">
+                <form method="get" action="BusquedaProductos" name="BusquedaProductos">
                     Buscar Producto<br>
                     <br>Por favor ingrese el ID del Producto que desea encontrar:<br>
                      ID: <input name="id" type="text"><br>

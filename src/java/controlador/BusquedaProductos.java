@@ -37,11 +37,11 @@ public class BusquedaProductos extends HttpServlet {
       
             /* TODO output your page here. You may use following sample code. */         
             String codigo = request.getParameter("codigo");
-            Modelo.Empleado emp = new Modelo.Empleado(Integer.parseInt(codigo),null,0, 0);
+            Modelo.Producto emp = new Modelo.Producto(Integer.parseInt(codigo),null,0,0);
             
-            RequestDispatcher dispacher =request.getRequestDispatcher("BusquedaEmpleado.jsp");
+            RequestDispatcher dispacher =request.getRequestDispatcher("BusquedaProductos.jsp");
             
-            request.setAttribute("empleado", emp);
+            request.setAttribute("producto", emp);
             dispacher.forward(request, response);
         }
     }

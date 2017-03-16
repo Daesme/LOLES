@@ -4,6 +4,10 @@
         <servlet-name>Ejemplo</servlet-name>
         <servlet-class>controlador.producto</servlet-class>
     </servlet>
+     <servlet>
+        <servlet-name>BusquedaEmpleados</servlet-name>
+        <servlet-class>controlador.BusquedaEmpleados</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>BusquedaProductos</servlet-name>
         <servlet-class>controlador.BusquedaProductos</servlet-class>
@@ -24,6 +28,8 @@
         <servlet-name>provedores</servlet-name>
         <servlet-class>controlador.provedores</servlet-class>
     </servlet>
+    
+    
     <servlet-mapping>
         <servlet-name>Ejemplo</servlet-name>
         <url-pattern>/Ingresodocentes</url-pattern>

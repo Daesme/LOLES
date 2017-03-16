@@ -33,7 +33,7 @@ public class ProductoDao {
     
     public ProductoDao() throws FileNotFoundException {
        
-        this.productoDB = new RandomAccessFile("producto.txt", "rw");
+        this.productoDB = new RandomAccessFile("C:\\Users\\Labing\\Desktop\\producto.txt", "rw");
     }
   
     public boolean insertar(Producto producto) throws IOException {
@@ -72,6 +72,10 @@ public class ProductoDao {
     }
 
     public ArrayList<Producto> listarTodo() throws IOException {
+        
+        
+        
+        
         for (long i = 0; i < this.productoDB.length(); i = i + 88) {
             this.productoDB.seek(i);
             id2 = this.productoDB.readInt();

@@ -36,9 +36,9 @@ public class productos extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
           
             int id = Integer.valueOf(request.getParameter("id"));
-            char[] nombre2 = request.getParameter("nombre").toCharArray();
-            int cantidad = Integer.valueOf(request.getParameter("apellido"));
-            int valor = Integer.valueOf(request.getParameter("valor"));
+            char[] nombre2 = request.getParameter("Descripcion").toCharArray();
+            int cantidad = Integer.valueOf(request.getParameter("Cantidad"));
+            int valor = Integer.valueOf(request.getParameter("ValorTotal"));
             
             
             /* TODO output your page here. You may use following sample code. */

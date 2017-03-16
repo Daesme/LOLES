@@ -51,8 +51,6 @@ public class EmpleadoDao {
 
         this.EmpleadoDataBase.writeInt(empleado.getDuracion());
 
-        this.EmpleadoDataBase.writeInt(empleado.getpago());
-
         return true;
     }
 
@@ -76,8 +74,6 @@ public class EmpleadoDao {
             System.out.println(nuevo2);
             dur2 = this.EmpleadoDataBase.readInt();
             System.out.println(dur2);
-            pago2 = this.EmpleadoDataBase.readInt();
-            System.out.println(pago2);
             System.out.println("");
         }
         return null;
@@ -93,7 +89,6 @@ public class EmpleadoDao {
            
         }
         dur = this.EmpleadoDataBase.readInt();
-        pago = this.EmpleadoDataBase.readInt();
     }
 
     public void destructor() throws IOException {

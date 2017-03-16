@@ -14,7 +14,7 @@
         <title>Buscar Proveedor
         </title></head><body>
             <div style="text-align: center;">
-                <form method="get" action="BuscarProvedor" name="BusquedaProvedores">
+                <form method="get" action="BusquedaProvedores" name="BusquedaProvedores">
                     Buscar Proveedor<br>
                     <br>Por favor ingrese el ID del Provedor que desea encontrar:<br>
                      ID: <input name="id" type="text"><br>
@@ -22,7 +22,7 @@
                     <input name="Buscar" type="submit">
                 </form>
                  <%
-          Provedor pro = (Provedor)request.getAttribute("estudiante");
+          Provedor pro = (Provedor)request.getAttribute("provedor");
            if(pro != null){
                ProvedorDAO est = new ProvedorDAO();
                est.ListarUnitario(pro.getId());
